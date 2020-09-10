@@ -1,0 +1,6 @@
+{
+    "internal": true,
+    "main": "../dist/forms/index.js",
+    "types": "../dist/forms/index.d.ts",
+    "module": "../dist/forms/index.esm.js"
+}

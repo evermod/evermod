@@ -1,0 +1,5 @@
+{
+    "internal": true,
+    "main": "../dist/graphql/index.js",
+    "types": "../dist/graphql/index.d.ts"
+}
