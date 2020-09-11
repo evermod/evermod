@@ -12,5 +12,6 @@ export const SIGN_OUT = gql`
 export const useSignOut = () => useMutation<SignOut>(SIGN_OUT)
 
 export const signOutResolver = () => {
-  firebase.auth().signOut()
+  console.log('SIGN_OUT_START')
+  firebase.auth().signOut().catch(e => console.log(e)).then(() => console.log('SIGN_OUT'))
 }

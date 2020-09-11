@@ -1,10 +1,11 @@
-// @ts-nocheck
 import withApollo from 'next-with-apollo'
 import { ApolloClient, InMemoryCache, createHttpLink, ApolloProvider } from '@apollo/client'
 import { setContext } from '@apollo/link-context'
 import { BatchHttpLink } from 'apollo-link-batch-http'
-import typeDefs from '../graphql/client/schema'
-import resolvers from '../graphql/client'
+import localTypedefs from '../graphql/client/schema'
+import localResolvers from '../graphql/client'
+
+import { resolvers as utilsResolvers, schema as utilsTypedefs } from '@evermod/utils/graphql'
 
 import { initFirebase, firebase } from '@evermod/utils/firebase'
 
@@ -32,11 +33,13 @@ const authLink = setContext(async (_, { headers }) => {
 export default withApollo(
   ({ initialState }) => {
     const cache = new InMemoryCache().restore(initialState || {})
+    console.log(utilsResolvers)
     return new ApolloClient({
+      // @ts-ignore
       link: authLink.concat(httpLink),
       cache,
-      typeDefs,
-      resolvers
+      typeDefs: utilsTypedefs,
+      resolvers: utilsResolvers,
     })
   },
   {

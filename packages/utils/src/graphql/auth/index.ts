@@ -4,7 +4,7 @@ import { SIGN_IN, signInResolver, useSignIn } from './SignIn'
 import { SIGN_OUT, signOutResolver, useSignOut } from './SignOut'
 
 const resolvers = {
-  ...User,
+  User,
   Mutation: {
     signIn: signInResolver,
     signOut: signOutResolver

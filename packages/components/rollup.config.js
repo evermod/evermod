@@ -1,4 +1,5 @@
 import ts from "@wessberg/rollup-plugin-ts"
+import image from '@rollup/plugin-image'
 
 const getConfig = ({ inputDir, output, isMinify }) => {
   return {
@@ -14,6 +15,7 @@ const getConfig = ({ inputDir, output, isMinify }) => {
       sourcemap: true
     }],
     plugins: [
+      image(),
       ts()
     ],
     external: [
@@ -27,5 +29,6 @@ const getConfig = ({ inputDir, output, isMinify }) => {
 }
 
 export default [
-    getConfig({ inputDir: "forms", output: "./dist/forms/index.js" })
+  getConfig({ inputDir: "." }),
+  getConfig({ inputDir: "forms" })
 ]

@@ -1,7 +1,5 @@
 import authResolvers from './auth'
 
-const resolvers = {
+export const resolvers = {
   ...authResolvers
 }
-
-export default resolvers

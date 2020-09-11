@@ -1,6 +1,12 @@
 import { gql } from '@apollo/client'
 
 export default gql`
+  extend type Query {
+    test: Boolean
+  }
+`
+
+const s = `
   enum Provider {
     GOOGLE
     EMAILPASSWORD

@@ -3,5 +3,8 @@
         "rootDir": "./src",
         "esModuleInterop": true,
         "declaration": true
-    }
+    },
+    "include": [
+        "./src/graphql.d.ts"
+    ]
 }

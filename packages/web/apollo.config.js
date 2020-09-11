@@ -2,6 +2,7 @@ module.exports = {
   client: {
     name: 'GraphQLClient',
     service: {
+      name: 'backend',
       localSchemaFile: './graphql-schema.json'
     },
     includes: [
