@@ -93,6 +93,24 @@ export interface SignOut {
 // This file was automatically generated and should not be edited.
 
 // ====================================================
+// GraphQL mutation operation: SignUp
+// ====================================================
+
+export interface SignUp {
+  signUp: boolean | null;
+}
+
+export interface SignUpVariables {
+  provider?: Provider | null;
+  auth?: SignUpInput | null;
+}
+
+/* tslint:disable */
+/* eslint-disable */
+// @generated
+// This file was automatically generated and should not be edited.
+
+// ====================================================
 // GraphQL mutation operation: CreateModpack
 // ====================================================
 
@@ -220,6 +238,12 @@ export interface AuthInput {
   email?: string | null;
   password?: string | null;
   remember?: boolean | null;
+}
+
+export interface SignUpInput {
+  displayName?: string | null;
+  email?: string | null;
+  password?: string | null;
 }
 
 //==============================================================
