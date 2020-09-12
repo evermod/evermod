@@ -1,3 +1,4 @@
 import AppHeader from './AppHeader'
 import ModpacksList from './ModpacksList'
-export { AppHeader, ModpacksList }
+import SignPageLayout from './SignPageLayout'
+export { AppHeader, ModpacksList, SignPageLayout }
