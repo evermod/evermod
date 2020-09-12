@@ -1,4 +1,4 @@
-import ts from "@wessberg/rollup-plugin-ts"
+import ts from '@wessberg/rollup-plugin-ts'
 import graphql from 'rollup-plugin-graphql'
 
 const getConfig = ({ input, output, isMinify }) => {
@@ -16,18 +16,17 @@ const getConfig = ({ input, output, isMinify }) => {
       })
     ],
     external: [
-      '@apollo/client', 
-      'firebase/app', 
-      'firebase/analytics', 
-      'firebase/auth', 
+      '@apollo/client',
+      'firebase/app',
+      'firebase/analytics',
+      'firebase/auth',
       'firebase/storage'
     ]
   }
 }
-  
 
 export default [
-    getConfig({ input: "./src/firebase/index.ts", output: "./dist/firebase/index.js" }),
-    getConfig({ input: "./src/graphql/index.ts", output: "./dist/graphql/index.js" }),
-    getConfig({ input: "./src/index.ts", output: "./dist/index.js" })
+  getConfig({ input: './src/firebase/index.ts', output: './dist/firebase/index.js' }),
+  getConfig({ input: './src/graphql/index.ts', output: './dist/graphql/index.js' }),
+  getConfig({ input: './src/index.ts', output: './dist/index.js' })
 ]

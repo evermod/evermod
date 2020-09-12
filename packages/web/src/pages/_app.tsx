@@ -1,4 +1,4 @@
-import App, { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
 import Head from 'next/head'
 import 'antd/dist/antd.less'
 import { useEffect } from 'react'

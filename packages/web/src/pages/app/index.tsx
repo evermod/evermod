@@ -1,4 +1,4 @@
-import { Button, Layout, Space, Menu } from 'antd'
+import { Button, Layout, Space } from 'antd'
 import { useRouter } from 'next/router'
 import { AppHeader, ModpacksList } from '@evermod/components'
 
@@ -9,8 +9,7 @@ import withAuth from '../../lib/withAuth'
 
 const { Content } = Layout
 
-// eslint-disable-next-line max-lines-per-function
-const App = ({ auth }) => {
+const App = () => {
   const router = useRouter()
   const [createModpack] = useCreateModpack()
   const { data, loading } = useModpacks()

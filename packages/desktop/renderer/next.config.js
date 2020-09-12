@@ -9,9 +9,9 @@ const themeVariables = lessToJS(
 )
 
 module.exports = withPlugins([
-  [withLess, { lessLoaderOptions: { javascriptEnabled: true, modifyVars: themeVariables } }],
+  [withLess, { lessLoaderOptions: { javascriptEnabled: true, modifyVars: themeVariables } }]
 ], {
   webpack: (config) => Object.assign(config, {
-    target: 'electron-renderer',
-  }),
-});
+    target: 'electron-renderer'
+  })
+})

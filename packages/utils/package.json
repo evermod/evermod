@@ -7,8 +7,8 @@
   "scripts": {
     "build": "yarn apollo:codegen && rollup -c",
     "watch": "rollup -cw",
-    "apollo:download": "apollo client:download-schema --endpoint=http://localhost:3000/api/graphql graphql-schema.json",
-    "apollo:codegen": "apollo client:codegen --target=typescript --outputFlat ./src/graphql/__generated__.ts"
+    "apollo:codegen": "apollo client:codegen --target=typescript --outputFlat ./src/graphql/__generated__.ts",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@wessberg/rollup-plugin-ts": "^1.3.4",

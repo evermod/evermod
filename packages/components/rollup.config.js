@@ -1,4 +1,4 @@
-import ts from "@wessberg/rollup-plugin-ts"
+import ts from '@wessberg/rollup-plugin-ts'
 import image from '@rollup/plugin-image'
 
 const getConfig = ({ inputDir, output, isMinify }) => {
@@ -19,16 +19,16 @@ const getConfig = ({ inputDir, output, isMinify }) => {
       ts()
     ],
     external: [
-      '@apollo/client', 
-      'firebase/app', 
-      'firebase/analytics', 
-      'firebase/auth', 
+      '@apollo/client',
+      'firebase/app',
+      'firebase/analytics',
+      'firebase/auth',
       'firebase/storage'
     ]
   }
 }
 
 export default [
-  getConfig({ inputDir: "." }),
-  getConfig({ inputDir: "forms" })
+  getConfig({ inputDir: '.' }),
+  getConfig({ inputDir: 'forms' })
 ]

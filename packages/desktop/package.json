@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "desktop",
+  "name": "@evermod/desktop",
   "description": "My application description",
   "version": "1.0.0",
   "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "nextron",
     "build": "nextron build",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "lint": "eslint ."
   },
   "dependencies": {
     "electron-serve": "^1.0.0",

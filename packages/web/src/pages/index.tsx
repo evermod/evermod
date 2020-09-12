@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { Button, Row, Col, Typography, Space, Layout } from 'antd'
+import { Button, Row, Col, Typography, Space } from 'antd'
 import { useRouter } from 'next/router'
 import SiteLayout from '../components/SiteLayout'
 

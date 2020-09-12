@@ -1,9 +1,7 @@
 import withApollo from 'next-with-apollo'
-import { ApolloClient, InMemoryCache, createHttpLink, ApolloProvider } from '@apollo/client'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { setContext } from '@apollo/link-context'
 import { BatchHttpLink } from 'apollo-link-batch-http'
-import localTypedefs from '../graphql/client/schema'
-import localResolvers from '../graphql/client'
 
 import { resolvers as utilsResolvers, schema as utilsTypedefs } from '@evermod/utils/graphql'
 
@@ -39,11 +37,10 @@ export default withApollo(
       link: authLink.concat(httpLink),
       cache,
       typeDefs: utilsTypedefs,
-      resolvers: utilsResolvers,
+      resolvers: utilsResolvers
     })
   },
   {
-    // eslint-disable-next-line react/display-name
     render: ({ Page, props }) => {
       return (
         <ApolloProvider client={props.apollo}>

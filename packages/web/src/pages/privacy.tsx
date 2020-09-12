@@ -1,7 +1,6 @@
-import { Layout, Typography, Anchor, BackTop } from 'antd'
+import { Typography, Anchor, BackTop } from 'antd'
 import SiteLayout from '../components/SiteLayout'
 
-const { Content } = Layout
 const { Title, Text, Paragraph } = Typography
 // eslint-disable-next-line max-lines-per-function
 const Privacy = () => {
