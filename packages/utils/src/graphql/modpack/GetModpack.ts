@@ -43,6 +43,6 @@ export const GET_MODPACK = gql`
 `
 
 export const getModpack = (id: string) => {
-    const client = useApolloClient()
-    return client.query<GetModpack, GetModpackVariables>({ query: GET_MODPACK, variables: { id } })
+  const client = useApolloClient()
+  return client.query<GetModpack, GetModpackVariables>({ query: GET_MODPACK, variables: { id } })
 }
