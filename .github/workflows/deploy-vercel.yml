@@ -44,7 +44,6 @@ jobs:
         id: vercel-action-staging
         if: github.event_name == 'pull_request'
         with:
-          working-directory: packages/web
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.WEB_ORG_ID }}
@@ -54,7 +53,6 @@ jobs:
         id: vercel-action-production
         if: github.event_name == 'push'
         with:
-          working-directory: packages/web 
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.WEB_ORG_ID }}
