@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "lerna run lint --stream"
+    "lint": "lerna run lint --stream",
+    "web:build": "lerna run --scope={@evermod/web,@evermod/utils,@evermod/components} build"
   },
   "workspaces": {
     "packages": [
