@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@evermod/web",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,8 +14,8 @@
   "dependencies": {
     "@apollo/link-context": "^2.0.0-beta.3",
     "@emotion/core": "^10.0.35",
-    "@evermod/components": "^0.0.1",
-    "@evermod/utils": "^0.0.1",
+    "@evermod/components": "^0.0.2",
+    "@evermod/utils": "^0.0.2",
     "antd-img-crop": "^3.10.0",
     "apollo-datasource-rest": "^0.9.3",
     "apollo-link-batch-http": "^1.2.14",
