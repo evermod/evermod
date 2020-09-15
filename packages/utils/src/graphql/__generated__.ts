@@ -111,6 +111,23 @@ export interface SignUpVariables {
 // This file was automatically generated and should not be edited.
 
 // ====================================================
+// GraphQL mutation operation: UpdateUser
+// ====================================================
+
+export interface UpdateUser {
+  updateUser: boolean | null;
+}
+
+export interface UpdateUserVariables {
+  patch: UserPatch;
+}
+
+/* tslint:disable */
+/* eslint-disable */
+// @generated
+// This file was automatically generated and should not be edited.
+
+// ====================================================
 // GraphQL mutation operation: CreateModpack
 // ====================================================
 
@@ -244,6 +261,11 @@ export interface SignUpInput {
   displayName?: string | null;
   email?: string | null;
   password?: string | null;
+}
+
+export interface UserPatch {
+  displayName?: string | null;
+  photo?: string | null;
 }
 
 //==============================================================

@@ -105,6 +105,11 @@ input SignUpInput {
   password: String
 }
 
+input UserPatch {
+  displayName: String
+  photo: String
+}
+
 extend type Query {
   user: User
   authReady: Boolean
@@ -117,4 +122,5 @@ extend type Mutation {
   signUp(provider: Provider, auth: SignUpInput): Boolean
   signIn(provider: Provider, auth: AuthInput): User
   signOut: Boolean
+  updateUser(patch: UserPatch): Boolean
 }
